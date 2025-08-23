@@ -37,10 +37,10 @@ export function AnimatedGridPattern({
   duration = 4,
   repeatDelay = 0.3,
   colors = [
-    "#0ea5e9", // cyan-600
-    "#22d3ee", // cyan-400
-    "#38bdf8", // sky-400
-    "#60a5fa", // blue-400
+    "#e11d48", // crimson
+    "#f43f5e", // rose
+    "#9f1239", // deep maroon
+    "#ff0057", // neon pink
   ],
   ...props
 }: AnimatedGridPatternProps) {
@@ -61,7 +61,7 @@ export function AnimatedGridPattern({
       id: i,
       pos: getPos(),
       color: colors[Math.floor(Math.random() * colors.length)],
-      blur: Math.random() > 0.7 ? 8 : 0, // softer glow
+      blur: Math.random() > 0.7 ? 8 : 0,
       opacity: Math.random() * 0.5 + 0.5,
       rotate: 0,
     }));
@@ -124,12 +124,12 @@ export function AnimatedGridPattern({
       <defs>
         {/* Neon gradients */}
         <radialGradient id={`${id}-bg1`} cx="30%" cy="40%" r="90%">
-          <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#000000" stopOpacity="1" />
+          <stop offset="0%" stopColor="#f43f5e" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#0a0a0a" stopOpacity="1" />
         </radialGradient>
         <radialGradient id={`${id}-bg2`} cx="70%" cy="60%" r="90%">
-          <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.2" />
-          <stop offset="100%" stopColor="#000000" stopOpacity="0.9" />
+          <stop offset="0%" stopColor="#e11d48" stopOpacity="0.25" />
+          <stop offset="100%" stopColor="#0a0a0a" stopOpacity="0.9" />
         </radialGradient>
 
         {/* Flowing grid lines */}
@@ -145,11 +145,11 @@ export function AnimatedGridPattern({
             d={`M.5 ${height}V.5H${width}`}
             fill="none"
             strokeDasharray={strokeDasharray}
-            stroke="#1e3a8a"
+            stroke="#9f1239"
             strokeOpacity="0.1"
             animate={{
-              stroke: ["#1e3a8a", "#22d3ee", "#38bdf8", "#1e3a8a"],
-              strokeOpacity: [0.1, 0.3, 0.1],
+              stroke: ["#9f1239", "#f43f5e", "#ff0057", "#e11d48"],
+              strokeOpacity: [0.1, 0.35, 0.1],
             }}
             transition={{
               duration: 4,
@@ -172,10 +172,10 @@ export function AnimatedGridPattern({
 
       {/* Background layers */}
       <rect width="100%" height="100%" fill={`url(#${id}-bg1)`} />
-      <rect width="100%" height="100%" fill={`url(#${id}-bg2)`} opacity={0.9} />
-      <rect width="100%" height="100%" fill={`url(#${id})`} opacity={0.2}/>
+      <rect width="100%" height="100%" fill={`url(#${id}-bg2)`} opacity={1} />
+      <rect width="100%" height="100%" fill={`url(#${id})`} opacity={0.2} />
 
-      {/* Neon squares */}
+      {/* Floating squares */}
       <svg x={x} y={y} className="overflow-visible">
         {squares.map(({ pos: [x, y], id, color, blur, opacity }, index) => (
           <motion.rect
@@ -184,7 +184,7 @@ export function AnimatedGridPattern({
             animate={{
               opacity: [0, opacity * maxOpacity, 0],
               scale: [1, 1.3, 1],
-              rotate: [0, 5, -5, 0], // gentle floating effect
+              rotate: [0, 5, -5, 0],
             }}
             transition={{
               duration: duration + Math.random() * 3,

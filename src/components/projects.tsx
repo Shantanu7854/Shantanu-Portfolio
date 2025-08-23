@@ -22,9 +22,9 @@ const ProjectCard = ({
   githubUrl,
 }: ProjectCardProps) => {
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-xl border border-accent transition-all hover:border-primary/50">
+    <div className="group relative flex flex-col overflow-hidden rounded-xl border border-rose-500/30 bg-slate-900/30 backdrop-blur-sm transition-all hover:border-rose-400/60 hover:bg-slate-800/40 hover:shadow-[0_0_20px_rgba(244,63,94,0.4)]">
       {/* Project Image */}
-      <div className="relative h-64 overflow-hidden bg-accent">
+      <div className="relative h-64 overflow-hidden bg-slate-800/50">
         <Image
           src={image}
           alt={title}
@@ -35,13 +35,18 @@ const ProjectCard = ({
 
       {/* Content */}
       <div className="flex-1 flex flex-col p-6">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <h3 className="text-xl font-semibold mb-2 text-rose-200">{title}</h3>
+        <p className="text-slate-400 mb-4">{description}</p>
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-6">
           {technologies.map((tech) => (
-            <Badge key={tech} variant="secondary" className="rounded-full">
+            <Badge
+              key={tech}
+              className="rounded-full bg-slate-800/50 border border-rose-500/30 text-rose-300 
+              hover:bg-rose-600/30 hover:text-rose-100 
+              hover:shadow-[0_0_10px_rgba(244,63,94,0.5)] transition-all"
+            >
               {tech}
             </Badge>
           ))}
@@ -50,7 +55,12 @@ const ProjectCard = ({
         {/* Actions */}
         <div className="flex gap-3 mt-auto">
           {liveUrl && (
-            <Button variant="default" className="rounded-full" asChild>
+            <Button
+              className="rounded-full bg-rose-500 hover:bg-rose-400 text-slate-900 font-medium 
+              shadow-lg hover:shadow-[0_0_20px_rgba(244,63,94,0.5)] transition-all duration-300 
+              border border-rose-400/50"
+              asChild
+            >
               <a href={liveUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-1 h-4 w-4" />
                 Live Demo
@@ -59,8 +69,9 @@ const ProjectCard = ({
           )}
           {githubUrl && (
             <Button
-              variant="outline"
-              className="rounded-full shadow-none"
+              className="rounded-full border border-rose-400/40 text-rose-300 font-medium 
+              hover:bg-rose-500/10 hover:text-rose-100 hover:border-rose-300/50 
+              backdrop-blur-sm transition-all duration-300 shadow-none bg-transparent"
               asChild
             >
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
@@ -119,15 +130,12 @@ const Projects = () => {
     <section id="projects" className="relative py-20 px-6">
       <div className="max-w-screen-md mx-auto">
         <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4">
+          <Badge className="mb-4 bg-rose-500/20 border border-rose-400/40 text-rose-300 font-medium backdrop-blur-sm px-4 py-1.5 text-sm rounded-lg">
             Projects
           </Badge>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Featured Work
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-rose-200 drop-shadow-[0_0_15px_rgba(244,63,94,0.6)]">
+            Some of my works
           </h2>
-          <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
-            Showcasing some of my best projects and technical achievements
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

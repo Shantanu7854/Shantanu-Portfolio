@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin, Instagram } from "lucide-react";
 
@@ -22,7 +21,7 @@ const Hero = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Parallax state
-  const [offsetY, setOffsetY] = useState(0);
+  // const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
@@ -38,11 +37,11 @@ const Hero = () => {
     };
   }, [index]);
 
-  useEffect(() => {
-    const handleScroll = () => setOffsetY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => setOffsetY(window.scrollY);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

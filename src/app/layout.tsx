@@ -6,6 +6,9 @@ import { AnimatedGridPattern } from "../components/magicui/animated-grid-pattern
 export const metadata: Metadata = {
   title: "Shantanu Saha | Portfolio",
   description: "My Software Engineer Portfolio built with Next.js, TS, Tailwind, and shadcn/ui",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

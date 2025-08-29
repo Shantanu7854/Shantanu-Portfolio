@@ -89,41 +89,41 @@ const ProjectCard = ({
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "SyllabiWise",
       description:
-        "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      image: "/placeholder.svg",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-      liveUrl: "https://ecommerce-demo.com",
-      githubUrl: "https://github.com/username/ecommerce",
+        "An AI-powered platform that bridges academic syllabi with curated YouTube video playlists(according to the syllabi) for personalized learning.",
+      image: "/Project 2.png",
+      technologies: ["React", "Django", "JWT auth", "Gemini API", "Context API"],
+      liveUrl: "https://syllabi-wise-frontend.vercel.app/",
+      githubUrl: "https://github.com/Shantanu7854/SyllabiWise",
     },
     {
-      title: "AI Task Manager",
+      title: "Cab Map",
       description:
-        "Smart task management app that uses AI to categorize, prioritize, and suggest optimal task scheduling.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Python", "TensorFlow", "FastAPI", "MongoDB"],
-      liveUrl: "https://ai-taskmanager.com",
-      githubUrl: "https://github.com/username/ai-taskmanager",
+        "A web application that extracts precise addresses from Google Maps links and enables users to book cabs with distance and fare estimation.",
+      image: "/Project 1.png",
+      technologies: ["Next.js", "Flask", "Unalix", "Open Street Map API"],
+      liveUrl: "https://map-link-locator-frontend.vercel.app/",
+      githubUrl: "https://github.com/Shantanu7854/Cab-Map",
     },
-    {
-      title: "Real-time Chat Application",
-      description:
-        "Feature-rich chat application with real-time messaging, file sharing, and video calls.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Socket.io", "WebRTC", "Node.js", "Redis"],
-      liveUrl: "https://chatapp-demo.com",
-      githubUrl: "https://github.com/username/chat-app",
-    },
-    {
-      title: "AI Image Generator",
-      description:
-        "An AI image generator that uses a model to generate images based on a prompt.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
-      liveUrl: "https://ai-image-generator.com",
-      githubUrl: "https://github.com/username/ai-image-generator",
-    },
+    // {
+    //   title: "Real-time Chat Application",
+    //   description:
+    //     "Feature-rich chat application with real-time messaging, file sharing, and video calls.",
+    //   image: "/placeholder.svg",
+    //   technologies: ["React", "Socket.io", "WebRTC", "Node.js", "Redis"],
+    //   liveUrl: "https://chatapp-demo.com",
+    //   githubUrl: "https://github.com/username/chat-app",
+    // },
+    // {
+    //   title: "AI Image Generator",
+    //   description:
+    //     "An AI image generator that uses a model to generate images based on a prompt.",
+    //   image: "/placeholder.svg",
+    //   technologies: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
+    //   liveUrl: "https://ai-image-generator.com",
+    //   githubUrl: "https://github.com/username/ai-image-generator",
+    // },
   ];
 
   return (

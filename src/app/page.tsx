@@ -7,11 +7,27 @@ import Contact from "@/components/contact";
 export default function Home() {
   return (
     <div className="sm:space-y-0">
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <div className="sm:space-y-0">
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="experience">
+        <Experience />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
     </div>
   );
 }

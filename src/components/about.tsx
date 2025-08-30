@@ -1,39 +1,60 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Download } from "lucide-react";
-import Image from "next/image";
 import { HTMLAttributes } from "react";
 import { GithubLogo } from "./icons";
 
+// React Icons
+import {
+  SiCplusplus,
+  SiPython,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiAngular,
+  SiReact,
+  SiNextdotjs,
+  SiFlask,
+  SiDjango,
+  SiTailwindcss,
+  SiMysql,
+  SiMongodb,
+  SiGit,
+} from "react-icons/si";
+
 const About = () => {
   return (
-    <section id="about" className="relative py-20 px-6">
-      <div className="max-w-screen-md mx-auto">
-        <div className="flex flex-col md:flex-row-reverse gap-12">
-          <ProfileImage className="hidden md:block" />
+    <section id="about" className="relative py-14 sm:py-20 px-4 sm:px-6">
+      <div className="max-w-screen-lg mx-auto">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-10 sm:gap-12">
+          {/* Tech Stack Grid - ONLY on desktop */}
+          <div className="hidden md:block">
+            <TechStackGrid className="flex-shrink-0" />
+          </div>
 
           {/* Content */}
-          <div className="flex-1 md:text-left">
+          <div className="flex-1 text-center md:text-left">
             {/* Badge */}
             <Badge
-              className="mb-4 bg-red-600/20 border border-red-500/40 text-red-300 font-medium backdrop-blur-sm px-4 py-1.5 text-sm rounded-lg"
+              className="mb-4 bg-red-600/20 border border-red-500/40 text-red-300 font-medium backdrop-blur-sm px-3 py-1.5 text-xs sm:text-sm rounded-lg"
             >
               About Me
             </Badge>
 
-            <ProfileImage className="mt-3 mb-8 block md:hidden" />
-
             {/* Heading */}
             <h2
-              className="text-4xl font-bold mb-4 tracking-tight 
-              text-red-200 leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 tracking-tight 
+              text-red-200 leading-snug sm:leading-tight"
             >
               Passionate about creating impactful web experiences
             </h2>
 
             {/* Paragraph */}
-            <p className="text-neutral-400 mb-6 text-justify leading-relaxed">
+            <p className="text-neutral-400 mb-6 text-sm sm:text-base md:text-lg text-justify leading-relaxed">
               I’m Shantanu Saha, a B.Tech graduate in Electronics and Communication
               Engineering, passionate about software development, IoT solutions, and
               leading projects that create real-world value. My journey has been shaped
@@ -51,29 +72,39 @@ const About = () => {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 justify-start">
-              {/* Github Button */}
-              <Button
-                className="rounded-full bg-gradient-to-r from-red-700/90 to-red-500/90 
-                hover:from-red-600 hover:to-rose-500 text-white font-medium 
-                shadow-[0_0_18px_rgba(220,38,38,0.8)] 
-                hover:scale-105 transition-all duration-300"
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
+              <a
+                href="https://github.com/Shantanu7854/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <GithubLogo />
-                View Github
-              </Button>
+                <Button
+                  className="rounded-full bg-gradient-to-r from-red-700/90 to-red-500/90 
+                  hover:from-red-600 hover:to-rose-500 text-white font-medium 
+                  shadow-[0_0_15px_rgba(220,38,38,0.8)] 
+                  hover:scale-105 transition-all duration-300 text-sm sm:text-base px-4 sm:px-6"
+                >
+                  <GithubLogo />
+                  View Github
+                </Button>
+              </a>
 
-              {/* CV Button */}
-              <Button
-                variant="outline"
-                className="rounded-full border border-red-400/40 text-red-300 font-medium
-                bg-white/5 backdrop-blur-sm hover:text-red-200 hover:border-red-400 
-                transition-all duration-300 
-                hover:shadow-[0_0_15px_rgba(220,38,38,0.6)]"
+              <a
+                href="https://drive.google.com/file/d/1AOvKw79EY0hmLZsD1OJmMESGWYIFQ0xx/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Download />
-                Download CV
-              </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full border border-red-400/40 text-red-300 font-medium
+                  bg-white/5 backdrop-blur-sm hover:text-red-200 hover:border-red-400 
+                  transition-all duration-300 
+                  hover:shadow-[0_0_12px_rgba(220,38,38,0.6)] text-sm sm:text-base px-4 sm:px-6"
+                >
+                  <Download />
+                  Download CV
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -82,20 +113,43 @@ const About = () => {
   );
 };
 
-const ProfileImage = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("mt-10 w-48 h-48 md:w-64 md:h-64", className)} {...props}>
+// Tech Stack Grid Component (desktop only)
+const TechStackGrid = ({ className }: HTMLAttributes<HTMLDivElement>) => {
+  const icons = [
+    { Icon: SiCplusplus, color: "text-blue-500" },
+    { Icon: SiPython, color: "text-yellow-400" },
+    { Icon: SiHtml5, color: "text-orange-500" },
+    { Icon: SiCss3, color: "text-blue-400" },
+    { Icon: SiJavascript, color: "text-yellow-300" },
+    { Icon: SiTypescript, color: "text-blue-600" },
+    { Icon: SiAngular, color: "text-red-600" },
+    { Icon: SiReact, color: "text-cyan-400" },
+    { Icon: SiNextdotjs, color: "text-white" },
+    { Icon: SiFlask, color: "text-gray-300" },
+    { Icon: SiDjango, color: "text-green-600" },
+    { Icon: SiTailwindcss, color: "text-sky-400" },
+    { Icon: SiMysql, color: "text-orange-400" },
+    { Icon: SiMongodb, color: "text-green-500" },
+    { Icon: SiGit, color: "text-red-500" },
+  ];
+
+  return (
     <div
-      className="relative w-full h-full rounded-2xl overflow-hidden 
-      bg-neutral-900/70 border border-red-500/40 backdrop-blur-sm
-      shadow-[0_0_20px_rgba(220,38,38,0.5)] hover:shadow-[0_0_25px_rgba(220,38,38,0.8)]
-      transition-shadow duration-300"
+      className={cn(
+        "grid grid-cols-4 gap-6 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-red-400/30 shadow-lg",
+        className
+      )}
     >
-      <Image src="/placeholder.svg" alt="" className="object-cover" fill />
+      {icons.map(({ Icon, color }, i) => (
+        <div
+          key={i}
+          className={`flex items-center justify-center text-3xl ${color} hover:scale-110 transition-transform duration-300`}
+        >
+          <Icon />
+        </div>
+      ))}
     </div>
-  </div>
-);
+  );
+};
 
 export default About;

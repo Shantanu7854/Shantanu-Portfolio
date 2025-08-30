@@ -11,7 +11,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
   <NavigationMenu {...props}>
     <NavigationMenuList className="gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
       {[
-        { href: "#hero", label: "Home" },
+        { href: "#", label: "Home" },
         { href: "#about", label: "About" },
         { href: "#experience", label: "Experience" },
         { href: "#projects", label: "Projects" },

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="sm:space-y-0">
       <div className="sm:space-y-0">
-      <section id="hero">
+      <section id="home">
         <Hero />
       </section>
 

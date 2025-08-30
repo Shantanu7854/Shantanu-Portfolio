@@ -27,7 +27,7 @@ const Hero = () => {
   }, [index]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 overflow-hidden">
+    <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center px-1 sm:px-6 md:px-10 overflow-hidden">
       <div className="relative z-[1] text-center max-w-screen-lg flex flex-col items-center">
         {/* Profile Image */}
         <div className="relative">

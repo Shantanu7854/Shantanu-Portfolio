@@ -69,7 +69,7 @@ const Hero = () => {
         <div className="mt-8 sm:mt-10 md:mt-12 flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
           {/* GitHub */}
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/Shantanu7854/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-gradient-to-r from-red-700/90 to-rose-600/90 
@@ -82,7 +82,7 @@ const Hero = () => {
 
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/in/your-linkedin-username"
+            href="https://www.linkedin.com/in/shantanu-saha-7b9512226/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-red-400/70 text-red-300 
@@ -96,7 +96,7 @@ const Hero = () => {
 
           {/* Instagram */}
           <a
-            href="https://instagram.com/your-instagram-username"
+            href="https://www.instagram.com/_shantanusaha"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-rose-400/70 text-rose-300 

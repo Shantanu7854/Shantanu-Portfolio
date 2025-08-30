@@ -76,7 +76,7 @@ const Experience = () => {
       technologies: ["Angular", "Django", "TypeScript", "MySQL"],
     },
     {
-      title: "Frontend Developer Intern + Tech Product Manager",
+      title: "Frontend Developer Intern and assumed Tech Product Manager",
       company: "Oriens Infotech (Techno Billion AI)",
       period: "Apr 2024 - Dec 2024",
       description:

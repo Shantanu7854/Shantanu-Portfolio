@@ -62,7 +62,7 @@ const About = () => {
               practical impact.
               <br />
               Driven by impact, I focus on turning ideas into scalable solutions—whether
-              it’s developing assistive IoT devices, crafting innovative software, or
+              it’s crafting innovative software, developing assistive IoT devices, or
               guiding teams toward delivering successful outcomes. I believe technology
               should not only solve problems but also inspire meaningful change.
               <br />

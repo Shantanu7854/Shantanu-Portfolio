@@ -7,6 +7,7 @@ import { NavMenu } from "./nav-menu";
 export const NavigationSheet = () => {
   return (
     <Sheet>
+      {/* Mobile Menu Trigger */}
       <SheetTrigger asChild>
         <Button
           variant="ghost"
@@ -19,6 +20,7 @@ export const NavigationSheet = () => {
         </Button>
       </SheetTrigger>
 
+      {/* Sidebar Content */}
       <SheetContent
         side="left"
         className="w-72 sm:w-80 bg-gradient-to-b from-black via-neutral-900 to-black 
@@ -37,8 +39,6 @@ export const NavigationSheet = () => {
               className="space-y-6 text-lg font-medium"
             />
           </div>
-
-  
         </div>
       </SheetContent>
     </Sheet>

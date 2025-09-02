@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
@@ -14,21 +13,21 @@ const Navbar04Page = () => {
       max-w-screen-xl mx-auto rounded-full 
       animate-[fadeInDown_0.8s_ease] z-50"
     >
-      <div className="h-full flex items-center justify-between mx-auto px-6">
-        {/* Logo */}
+      <div className="h-full flex items-center justify-between px-6">
+        {/* Left: Logo */}
         <Logo />
 
-        {/* Desktop Menu */}
-        <NavMenu
-          className="hidden md:block text-red-300 tracking-wide 
-          transition-colors duration-300 hover:text-red-400"
-        />
+        {/* Center: Desktop Menu */}
+        <div className="hidden md:flex justify-center flex-1">
+          <NavMenu
+            className="text-red-300 tracking-wide 
+            transition-colors duration-300 hover:text-red-400"
+          />
+        </div>
 
-        <div className="flex items-center gap-3">
-          {/* Mobile Menu */}
-          <div className="md:hidden">
-            <NavigationSheet />
-          </div>
+        {/* Right: Mobile Menu */}
+        <div className="md:hidden">
+          <NavigationSheet />
         </div>
       </div>
     </nav>
